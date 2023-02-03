@@ -78,4 +78,11 @@ class Sabitler2 {
       "Jakuzili odalar 35 m² büyüklüğünde. Odalarda çift kişilik tek yatak bulunuyor.";
   static const String aktiviteBisiklet = "SPINNING-";
   static const String aktiviteBisiklet1 = "Sporlar";
+  static const String aktiviteBoks = "KICK BOX-";
+  static const String aktivitePilates = "PİLATES-";
+  static const String aktiviteBaslik = "WORLD CLASS";
+  static const String aktiviteAciklama =
+      "Tatilde spora devam. Ünlü spor klübü World Class ile beraber,  Misafirlerimizin otel içinde sağlıklı yaşama devam etmelerini sağlıyoruz. ";
+  static const String aktiviteAciklama1 =
+      "Kara sporları, su sporları, ekstrem sporlar ve daha fazlası.  Tatilde dinlenmek ve eğlenmenin yanında spora devam etmek isteyenler, 600m kapalı alanı ve 270 m koşu parkurunun da bulunduğu toplamda 1500m lik alana sahip World Class Spor Klübü’nde  rahatça spor yapmanın keyfini çıkarıyor. Bunun yanında ünlü eğitmenler eşliğinde; yoga, fitness kangoo jumps, zumba, budokon gibi spor aktivitelerini de deneyimleme fırsatı yakalıyor. World Class, deniz manzarası ile beraber son teknoloji ürünü  spor aletleri ve uzman eğitmenler eşliğinde tatilde sporda  vazgeçemeyenlerin ilk adresi olacak.";
 }

@@ -46,7 +46,7 @@ class TextStyle1 {
     color: Sabitler.text,
   );
   static final TextStyle body1MediumBlack = GoogleFonts.montserrat(
-    fontWeight: FontWeight.w400,
+    fontWeight: FontWeight.w500,
     fontSize: 16,
     color: Sabitler.textBlack,
   );
@@ -65,6 +65,11 @@ class TextStyle1 {
     fontSize: 13,
     color: Sabitler.textBlack,
   );
+  static final TextStyle ovelineMediumGrey = GoogleFonts.montserrat(
+    fontWeight: FontWeight.w600,
+    fontSize: 13,
+    color: Sabitler.subtitle,
+  );
   static final TextStyle ovelineMediumBlackCizgi = GoogleFonts.montserrat(
       fontWeight: FontWeight.w600,
       fontSize: 13,
@@ -77,6 +82,8 @@ class TextStyle1 {
   );
   static final TextStyle h5BoldBlack = GoogleFonts.montserrat(
       fontWeight: FontWeight.w400, fontSize: 28, color: Sabitler.textBlack);
+  static final TextStyle h5MediumBlack = GoogleFonts.montserrat(
+      fontWeight: FontWeight.w500, fontSize: 28, color: Sabitler.textBlack);
   static final TextStyle captionBoldWhite = GoogleFonts.montserrat(
     fontWeight: FontWeight.bold,
     fontSize: 18,
@@ -87,6 +94,16 @@ class TextStyle1 {
       fontSize: 14,
       color: Sabitler.subtitle,
       height: 1.7);
+  static final TextStyle captionLightBlack = GoogleFonts.montserrat(
+      fontWeight: FontWeight.w400,
+      fontSize: 14,
+      color: Sabitler.textBlack,
+      height: 1.7);
+  static final TextStyle captionLightGreyAciklama = GoogleFonts.montserrat(
+      fontWeight: FontWeight.w400,
+      fontSize: 14,
+      color: Sabitler.subtitle,
+      height: 2);
   static final TextStyle anasayfaBaslik = GoogleFonts.montserrat(
       fontWeight: FontWeight.w500,
       fontSize: 16,
