@@ -85,4 +85,11 @@ class Sabitler2 {
       "Tatilde spora devam. Ünlü spor klübü World Class ile beraber,  Misafirlerimizin otel içinde sağlıklı yaşama devam etmelerini sağlıyoruz. ";
   static const String aktiviteAciklama1 =
       "Kara sporları, su sporları, ekstrem sporlar ve daha fazlası.  Tatilde dinlenmek ve eğlenmenin yanında spora devam etmek isteyenler, 600m kapalı alanı ve 270 m koşu parkurunun da bulunduğu toplamda 1500m lik alana sahip World Class Spor Klübü’nde  rahatça spor yapmanın keyfini çıkarıyor. Bunun yanında ünlü eğitmenler eşliğinde; yoga, fitness kangoo jumps, zumba, budokon gibi spor aktivitelerini de deneyimleme fırsatı yakalıyor. World Class, deniz manzarası ile beraber son teknoloji ürünü  spor aletleri ve uzman eğitmenler eşliğinde tatilde sporda  vazgeçemeyenlerin ilk adresi olacak.";
+  static const String aktiviteDetayBannerBaslik = "Easy Yoga";
+  static const String aktiviteDetayBannerAciklama1 = "8:00 - 22:00 AM";
+  static const String aktiviteDetayBannerAciklama2 = "44 Swanson Dr. Hamden";
+  static const String aktiviteDetayBaslik = "Aktivite Detayları";
+  static const String aktiviteDetayAciklama = "Fiziksel ve zihinsel iyilik halini artırmak için nefes almaya odaklanan bir egzersiz şeklidir. Stresi azaltmak, sağlıklı kalmak, güç ve esnekliği artırmak için tasarlanmış bir dizi hareket, nefes egzersizleri ve meditasyon içerir. Amacı zihin ve bedende farkındalık ve uyum sağlamaktır.";
+  static const String odaServisiButon1 = "Giriş Yap";
+    static const String odaServisiButon2 = "Üye Ol";
 }

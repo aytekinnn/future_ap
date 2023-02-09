@@ -251,6 +251,7 @@ class _otelBilgisiState extends State<otelBilgisi> {
                   markers: {
                     Marker(
                       markerId: MarkerId("marker_1"),
+                     
                       position: _center,
                       infoWindow: InfoWindow(
                         title: "Aytekin Hotel",

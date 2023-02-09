@@ -1,8 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:future_app/widget/aktivite_detay_page.dart';
 import 'package:future_app/widget/aktiviteler_page.dart';
 import 'package:future_app/widget/anasayfa_page.dart';
+import 'package:future_app/widget/oda-servisi.dart';
 import 'package:future_app/widget/odalar_page.dart';
 import 'package:future_app/widget/otelbilgisi_page.dart';
 import 'package:future_app/widget/plaj_havuzlar_page.dart';
@@ -53,6 +55,24 @@ class RouteGenerator {
         } else {
           return MaterialPageRoute(
               builder: (context) => const AktivitelerPage());
+        }
+
+      case '/aktiviteDetayPage':
+        if (defaultTargetPlatform == TargetPlatform.iOS) {
+          return CupertinoPageRoute(
+              builder: (context) => const AktiviteDetayPage());
+        } else {
+          return MaterialPageRoute(
+              builder: (context) => const AktiviteDetayPage());
+        }
+
+      case '/odaServisiPage':
+        if (defaultTargetPlatform == TargetPlatform.iOS) {
+          return CupertinoPageRoute(
+              builder: (context) => const OdaServisiPage());
+        } else {
+          return MaterialPageRoute(
+              builder: (context) => const OdaServisiPage());
         }
 
       default:

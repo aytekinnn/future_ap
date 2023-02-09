@@ -298,7 +298,10 @@ class _AktivitelerPageState extends State<AktivitelerPage> {
                               padding:
                                   const EdgeInsets.only(left: 25, right: 25),
                             ),
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.pushNamed(
+                                  context, '/aktiviteDetayPage');
+                            },
                             child: Row(
                               children: [
                                 Text("DETAY",
@@ -386,7 +389,10 @@ class _AktivitelerPageState extends State<AktivitelerPage> {
                                 padding:
                                     const EdgeInsets.only(left: 25, right: 25),
                               ),
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.pushNamed(
+                                    context, '/aktiviteDetayPage');
+                              },
                               child: Row(
                                 children: [
                                   Text("DETAY",
@@ -478,7 +484,10 @@ class _AktivitelerPageState extends State<AktivitelerPage> {
                                 padding:
                                     const EdgeInsets.only(left: 25, right: 25),
                               ),
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.pushNamed(
+                                    context, '/aktiviteDetayPage');
+                              },
                               child: Row(
                                 children: [
                                   Text("DETAY",

@@ -42,12 +42,17 @@ class TextStyle1 {
   );
   static final TextStyle body1MediumWhite = GoogleFonts.montserrat(
     fontWeight: FontWeight.w400,
-    fontSize: 16,
+    fontSize: 20,
     color: Sabitler.text,
+  );
+  static final TextStyle body1MediumBlue = GoogleFonts.montserrat(
+    fontWeight: FontWeight.w400,
+    fontSize: 20,
+    color: Sabitler.anaRenk,
   );
   static final TextStyle body1MediumBlack = GoogleFonts.montserrat(
     fontWeight: FontWeight.w500,
-    fontSize: 16,
+    fontSize: 20,
     color: Sabitler.textBlack,
   );
   static final TextStyle captionMediumBlack = GoogleFonts.montserrat(
@@ -89,6 +94,11 @@ class TextStyle1 {
     fontSize: 18,
     color: Sabitler.text,
   );
+  static final TextStyle captionBoldBlack = GoogleFonts.montserrat(
+    fontWeight: FontWeight.bold,
+    fontSize: 18,
+    color: Sabitler.textBlack,
+  );
   static final TextStyle captionLightGrey = GoogleFonts.montserrat(
       fontWeight: FontWeight.w400,
       fontSize: 14,
@@ -123,4 +133,9 @@ class TextStyle1 {
     fontSize: 16.2,
     color: Sabitler.text,
   );
+  static final TextStyle body1Light = GoogleFonts.montserrat(
+      fontSize: 18, fontWeight: FontWeight.w300, color: Sabitler.text);
+
+  static final TextStyle body1Regular = GoogleFonts.montserrat(
+      fontSize: 18, fontWeight: FontWeight.w400, color: Sabitler.textBlack);
 }

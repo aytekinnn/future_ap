@@ -123,8 +123,8 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             child: Center(
-              child:
-                  Text(Sabitler2.hizliCehckin, style: TextStyle1.anasayfaBaslik),
+              child: Text(Sabitler2.hizliCehckin,
+                  style: TextStyle1.anasayfaBaslik),
             ),
           ),
         ),
@@ -182,7 +182,8 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             child: Center(
-              child: Text(Sabitler2.plajHavuz, style: TextStyle1.anasayfaBaslik),
+              child:
+                  Text(Sabitler2.plajHavuz, style: TextStyle1.anasayfaBaslik),
             ),
           ),
         ),
@@ -205,7 +206,9 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
         GestureDetector(
-          onTap: () {},
+          onTap: () {
+            Navigator.pushNamed(context, '/odaServisiPage');
+          },
           child: Container(
             margin: const EdgeInsets.only(top: 1, bottom: 1),
             height: 120,
