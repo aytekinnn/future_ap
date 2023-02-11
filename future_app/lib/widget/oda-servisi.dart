@@ -5,7 +5,6 @@ import 'package:future_app/constants/renkler.dart';
 import 'package:future_app/constants/text.dart';
 import 'package:future_app/constants/text_style.dart';
 
-
 class OdaServisiPage extends StatefulWidget {
   const OdaServisiPage({super.key});
 
@@ -17,8 +16,7 @@ class _OdaServisiPageState extends State<OdaServisiPage> {
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
-    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual,
-        overlays: [SystemUiOverlay.top]);
+
     return Scaffold(
       body: ListView(
         children: [

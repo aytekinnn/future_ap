@@ -40,8 +40,10 @@ class _hizmetlerPageState extends State<hizmetlerPage> {
               ),
               Stack(
                 children: [
-                  GestureDetector(
-                    onTap: () {},
+                  InkWell(
+                    onTap: () {
+                      Navigator.pushNamed(context, '/odaServisiPage');
+                    },
                     child: Container(
                       padding:
                           const EdgeInsets.only(left: 15, right: 15, top: 38),
@@ -115,8 +117,10 @@ class _hizmetlerPageState extends State<hizmetlerPage> {
               // 2. Hizmet
               Stack(
                 children: [
-                  GestureDetector(
-                    onTap: () {},
+                  InkWell(
+                    onTap: () {
+                      Navigator.pushNamed(context, '/odaServisiPage');
+                    },
                     child: Container(
                       padding:
                           const EdgeInsets.only(left: 15, right: 15, top: 16),
@@ -136,7 +140,7 @@ class _hizmetlerPageState extends State<hizmetlerPage> {
 
                     child: Container(
                       // We use this Container to create a black box that wraps the white text so that the user can read the text even when the image is white
-                      width: double.maxFinite,
+                      width: 120,
                       padding: const EdgeInsets.only(
                           top: 3, bottom: 3, left: 17, right: 17),
                       decoration: BoxDecoration(
@@ -157,7 +161,7 @@ class _hizmetlerPageState extends State<hizmetlerPage> {
 
                     child: Container(
                       // We use this Container to create a black box that wraps the white text so that the user can read the text even when the image is white
-                      width: 350,
+                      width: 190,
                       padding: const EdgeInsets.only(
                           top: 3, bottom: 3, left: 0, right: 17),
                       child: Text(
@@ -190,8 +194,10 @@ class _hizmetlerPageState extends State<hizmetlerPage> {
               // 3. Hizmet
               Stack(
                 children: [
-                  GestureDetector(
-                    onTap: () {},
+                  InkWell(
+                    onTap: () {
+                      Navigator.pushNamed(context, '/odaServisiPage');
+                    },
                     child: Container(
                       padding:
                           const EdgeInsets.only(left: 15, right: 15, top: 16),
@@ -265,8 +271,10 @@ class _hizmetlerPageState extends State<hizmetlerPage> {
               // 4. Hizmet
               Stack(
                 children: [
-                  GestureDetector(
-                    onTap: () {},
+                  InkWell(
+                    onTap: () {
+                      Navigator.pushNamed(context, '/odaServisiPage');
+                    },
                     child: Container(
                       padding:
                           const EdgeInsets.only(left: 15, right: 15, top: 16),
@@ -338,8 +346,10 @@ class _hizmetlerPageState extends State<hizmetlerPage> {
               // 5. Hizmet
               Stack(
                 children: [
-                  GestureDetector(
-                    onTap: () {},
+                  InkWell(
+                    onTap: () {
+                      Navigator.pushNamed(context, '/odaServisiPage');
+                    },
                     child: Container(
                       padding: const EdgeInsets.only(
                           left: 15, right: 15, top: 16, bottom: 20),

@@ -2,6 +2,8 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:future_app/constants/text.dart';
 import 'package:future_app/constants/text_style.dart';
+import 'package:future_app/model/weather.dart';
+import 'package:future_app/services/weather_service.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class HomePage extends StatefulWidget {
@@ -12,6 +14,29 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  WeatherService weatherService = WeatherService();
+  Weather weather = Weather();
+
+  String currentWeather = "";
+  double tempC = 0;
+  double tempF = 0;
+
+  @override
+  void initState() {
+    super.initState();
+    getWeather();
+  }
+
+  void getWeather() async {
+    weather = await weatherService.getWeatherData("Antalya");
+
+    setState(() {
+      currentWeather = weather.condition;
+      tempF = weather.temperatureC;
+      tempC = weather.temperatureF;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return ListView(
@@ -224,20 +249,33 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
         ),
-        GestureDetector(
-          onTap: () {},
-          child: Container(
-            margin: const EdgeInsets.only(top: 1, bottom: 1),
-            height: 120,
-            decoration: const BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage("assets/images/banner/app-banner-8.jpg"),
-                fit: BoxFit.cover,
-              ),
+        Container(
+          margin: const EdgeInsets.only(top: 1, bottom: 1),
+          height: 120,
+          decoration: const BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage("assets/images/banner/app-banner-8.jpg"),
+              fit: BoxFit.cover,
             ),
-            child: Center(
-              child:
-                  Text(Sabitler2.havaDurumu, style: TextStyle1.anasayfaBaslik),
+          ),
+          child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Text(Sabitler2.havaDurumu, style: TextStyle1.anasayfaBaslik),
+                Padding(
+                  padding: const EdgeInsets.only(top: 8.0),
+                  child: Text(
+                    tempF.toString() + " °C",
+                    style: TextStyle1.anasayfaBaslikHava,
+                  ),
+                ),
+                Text(
+                  tempC.toString() + " °F",
+                  style: TextStyle1.anasayfaBaslikHava,
+                ),
+              ],
             ),
           ),
         ),

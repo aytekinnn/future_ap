@@ -1,4 +1,4 @@
-package com.example.future_app
+package com.aren.yazilim
 
 import io.flutter.embedding.android.FlutterActivity
 

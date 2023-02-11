@@ -58,7 +58,7 @@ class ADIcon {
       IconData(0xe818, fontFamily: _kFontFam, fontPackage: _kFontPkg);
   static const IconData vector =
       IconData(0xe819, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  static const IconData _user =
+  static const IconData user1 =
       IconData(0xe81a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
   static const IconData user =
       IconData(0xe81b, fontFamily: _kFontFam, fontPackage: _kFontPkg);

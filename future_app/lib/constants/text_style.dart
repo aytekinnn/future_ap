@@ -138,4 +138,9 @@ class TextStyle1 {
 
   static final TextStyle body1Regular = GoogleFonts.montserrat(
       fontSize: 18, fontWeight: FontWeight.w400, color: Sabitler.textBlack);
+  static final TextStyle anasayfaBaslikHava = GoogleFonts.montserrat(
+      fontWeight: FontWeight.w500,
+      fontSize: 16,
+      color: Sabitler.text,
+      letterSpacing: 2);
 }

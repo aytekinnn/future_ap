@@ -25,8 +25,7 @@ class _AktiviteDetayPageState extends State<AktiviteDetayPage> {
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
-    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual,
-        overlays: [SystemUiOverlay.top]);
+
     return Scaffold(
       body: ListView(
         children: [
