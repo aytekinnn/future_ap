@@ -30,7 +30,9 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   carousel_slider: ^4.1.1
+  easy_localization: ^3.0.1
   cupertino_icons: ^1.0.2
+  get:
   drop_shadow: ^0.0.1+4
   google_maps_flutter: ^2.2.3
   fluttericon: ^2.0.0
@@ -68,6 +70,7 @@ flutter:
   assets:
     - assets/images/
     - assets/images/aktivite/
+    - assets/images/firsatlar/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

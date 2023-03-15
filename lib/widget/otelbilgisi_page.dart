@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:flutter/services.dart';
 import 'package:future_app/assets/ad_icon.dart';
 import 'package:future_app/constants/text_style.dart';
+import 'package:future_app/main.dart';
 import '../constants/renkler.dart';
 import '../constants/text.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
@@ -23,266 +25,260 @@ class _otelBilgisiState extends State<otelBilgisi> {
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
-      body: Container(
-        color: Colors.white,
-        child: ListView(
-          children: [
-            Stack(
-              children: [
-                CarouselSlider(
-                  items: [
-                    //1st Image of Slider
-                    GestureDetector(
-                      onTap: () {},
-                      child: Container(
-                        decoration: const BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage(
-                                "assets/images/otelBilgisi/rixos-otel-bilgisi.jpg"),
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                      ),
-                    ),
-
-                    //2nd Image of Slider
-                    GestureDetector(
-                      onTap: () {},
-                      child: Container(
-                        decoration: const BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage(
-                                "assets/images/otelBilgisi/rixos-otel-bilgisi-2.jpg"),
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                      ),
-                    ),
-
-                    //3rd Image of Slider
-                    GestureDetector(
-                      onTap: () {},
-                      child: Container(
-                        decoration: const BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage(
-                                "assets/images/otelBilgisi/rixos-otel-bilgisi-3.jpg"),
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                      ),
-                    ),
-
-                    //4th Image of Slider
-                  ],
-
-                  //Slider Container properties
-                  options: CarouselOptions(
-                    height: 440.0,
-                    enlargeCenterPage: true,
-                    autoPlay: true,
-                    aspectRatio: 16 / 9,
-                    autoPlayCurve: Curves.fastOutSlowIn,
-                    enableInfiniteScroll: true,
-                    autoPlayAnimationDuration:
-                        const Duration(milliseconds: 500),
-                    viewportFraction: 1,
-                  ),
-                ),
-                Positioned(
-                  // The Positioned widget is used to position the text inside the Stack widget
-                  top: 30,
-                  left: 25,
-
-                  child: GestureDetector(
-                    onTap: () {
-                      Navigator.of(context).pop();
-                    },
+      body: ListView(
+        children: [
+          Stack(
+            children: [
+              CarouselSlider(
+                items: [
+                  //1st Image of Slider
+                  GestureDetector(
+                    onTap: () {},
                     child: Container(
-                      // We use this Container to create a black box that wraps the white text so that the user can read the text even when the image is white
-                      width: 45,
-                      height: 45,
-                      padding: const EdgeInsets.only(top: 3, bottom: 3),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(30),
-                        color: Sabitler.anaRenk,
-                      ),
-                      child: const Center(
-                        child: Icon(
-                          ADIcon.arrowleft_4,
-                          color: Sabitler.text,
-                          size: 30,
+                      decoration: const BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage(
+                              "assets/images/otelBilgisi/rixos-otel-bilgisi.jpg"),
+                          fit: BoxFit.cover,
                         ),
                       ),
                     ),
                   ),
-                ),
-                Positioned(
-                  bottom: 0,
-                  child: Container(
-                    decoration: const BoxDecoration(
-                        borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(20),
-                          topRight: Radius.circular(20),
+
+                  //2nd Image of Slider
+                  GestureDetector(
+                    onTap: () {},
+                    child: Container(
+                      decoration: const BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage(
+                              "assets/images/otelBilgisi/rixos-otel-bilgisi-2.jpg"),
+                          fit: BoxFit.cover,
                         ),
-                        color: Sabitler.text),
-                    width: screenWidth,
-                    child: Padding(
-                      padding:
-                          const EdgeInsets.only(left: 16, right: 16, top: 10),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Column(
-                            children: [
-                              Text(
-                                Sabitler2.bilgiBaslik,
-                                style: TextStyle1.body1BoldBlack,
-                              ),
-                              Row(
-                                children: const [
-                                  Icon(
-                                    ADIcon.star,
-                                    size: 10,
-                                    color: Sabitler.anaRenk,
-                                  ),
-                                  Icon(
-                                    ADIcon.star,
-                                    size: 10,
-                                    color: Sabitler.anaRenk,
-                                  ),
-                                  Icon(
-                                    ADIcon.star,
-                                    size: 10,
-                                    color: Sabitler.anaRenk,
-                                  ),
-                                  Icon(
-                                    ADIcon.star,
-                                    size: 10,
-                                    color: Sabitler.anaRenk,
-                                  ),
-                                  Icon(
-                                    ADIcon.star,
-                                    size: 10,
-                                    color: Sabitler.anaRenk,
-                                  ),
-                                ],
-                              )
-                            ],
-                          ),
-                          ElevatedButton(
-                            style: ElevatedButton.styleFrom(
-                              backgroundColor: Sabitler.anaRenk,
-                              shape: const RoundedRectangleBorder(
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(20)),
-                              ),
-                              padding:
-                                  const EdgeInsets.only(left: 30, right: 30),
-                            ),
-                            onPressed: () {},
-                            child: Text(Sabitler2.bilgiButon,
-                                style: TextStyle1.body1MediumWhite),
-                          )
-                        ],
                       ),
                     ),
                   ),
-                ),
-              ],
-            ),
-            bizimleIiletisimeGecin(),
-            const SizedBox(
-              height: 26,
-            ),
-            const Divider(
-              color: Sabitler.subtitle,
-              height: 25,
-              thickness: 1,
-              indent: 16,
-              endIndent: 16,
-            ),
-            otelOlanakHizmetler(),
-            Icons(),
-            const SizedBox(
-              height: 20,
-            ),
-            Center(
-              child: Text(
-                "TESİS OLANAKLARI",
-                style: TextStyle1.captionMediumBlack,
-              ),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            listSporBaslik(),
-            listSpor(),
-            const SizedBox(
-              height: 20,
-            ),
-            listOtelBaslik(),
-            listOtel(),
-            const SizedBox(
-              height: 40,
-            ),
-            Container(
-              margin: const EdgeInsets.only(left: 16),
-              child: Text(
-                "Konum",
-                style: TextStyle1.captionMediumBlack,
-                textAlign: TextAlign.left,
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 16.0, right: 16, top: 15),
-              child: Container(
-                width: MediaQuery.of(context).size.width,
-                height: 200,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                ),
-                child: GoogleMap(
-                  onMapCreated: _onMapCreated,
-                  initialCameraPosition: CameraPosition(
-                    target: _center,
-                    zoom: 12,
-                  ),
-                  markers: {
-                    Marker(
-                      markerId: MarkerId("marker_1"),
-                     
-                      position: _center,
-                      infoWindow: InfoWindow(
-                        title: "Aytekin Hotel",
+
+                  //3rd Image of Slider
+                  GestureDetector(
+                    onTap: () {},
+                    child: Container(
+                      decoration: const BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage(
+                              "assets/images/otelBilgisi/rixos-otel-bilgisi-3.jpg"),
+                          fit: BoxFit.cover,
+                        ),
                       ),
                     ),
+                  ),
+
+                  //4th Image of Slider
+                ],
+
+                //Slider Container properties
+                options: CarouselOptions(
+                  height: 440.0,
+                  enlargeCenterPage: true,
+                  autoPlay: true,
+                  aspectRatio: 16 / 9,
+                  autoPlayCurve: Curves.fastOutSlowIn,
+                  enableInfiniteScroll: true,
+                  autoPlayAnimationDuration: const Duration(milliseconds: 500),
+                  viewportFraction: 1,
+                ),
+              ),
+              Positioned(
+                // The Positioned widget is used to position the text inside the Stack widget
+                top: 30,
+                left: 25,
+
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).pop();
                   },
-                ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 16.0, right: 16),
-              child: FloatingActionButton.extended(
-                onPressed: () {
-                  mapController.animateCamera(
-                    CameraUpdate.newCameraPosition(
-                      CameraPosition(
-                        target: _center,
-                        zoom: 17,
+                  child: Container(
+                    // We use this Container to create a black box that wraps the white text so that the user can read the text even when the image is white
+                    width: 45,
+                    height: 45,
+                    padding: const EdgeInsets.only(top: 3, bottom: 3),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(30),
+                      color: Sabitler.anaRenk,
+                    ),
+                    child: const Center(
+                      child: Icon(
+                        ADIcon.arrowleft_4,
+                        color: Sabitler.text,
+                        size: 30,
                       ),
                     ),
-                  );
+                  ),
+                ),
+              ),
+              Positioned(
+                bottom: 0,
+                child: Container(
+                  decoration: const BoxDecoration(
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(20),
+                        topRight: Radius.circular(20),
+                      ),
+                      color: Sabitler.text),
+                  width: screenWidth,
+                  child: Padding(
+                    padding:
+                        const EdgeInsets.only(left: 16, right: 16, top: 10),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Column(
+                          children: [
+                            Text(
+                              Sabitler2.bilgiBaslik,
+                              style: TextStyle1.body1BoldBlack,
+                            ),
+                            Row(
+                              children: const [
+                                Icon(
+                                  ADIcon.star,
+                                  size: 10,
+                                  color: Sabitler.anaRenk,
+                                ),
+                                Icon(
+                                  ADIcon.star,
+                                  size: 10,
+                                  color: Sabitler.anaRenk,
+                                ),
+                                Icon(
+                                  ADIcon.star,
+                                  size: 10,
+                                  color: Sabitler.anaRenk,
+                                ),
+                                Icon(
+                                  ADIcon.star,
+                                  size: 10,
+                                  color: Sabitler.anaRenk,
+                                ),
+                                Icon(
+                                  ADIcon.star,
+                                  size: 10,
+                                  color: Sabitler.anaRenk,
+                                ),
+                              ],
+                            )
+                          ],
+                        ),
+                        ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Sabitler.anaRenk,
+                            shape: const RoundedRectangleBorder(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(20)),
+                            ),
+                            padding: const EdgeInsets.only(left: 30, right: 30),
+                          ),
+                          onPressed: () {},
+                          child: Text(Sabitler2.bilgiButon,
+                              style: TextStyle1.body1MediumWhite),
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+          bizimleIiletisimeGecin(),
+          const SizedBox(
+            height: 26,
+          ),
+          const Divider(
+            color: Sabitler.subtitle,
+            height: 25,
+            thickness: 1,
+            indent: 16,
+            endIndent: 16,
+          ),
+          otelOlanakHizmetler(),
+          Icons(),
+          const SizedBox(
+            height: 20,
+          ),
+          Center(
+            child: Text(
+              "TESİS OLANAKLARI",
+              style: TextStyle1.captionMediumBlack,
+            ),
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          listSporBaslik(),
+          listSpor(),
+          const SizedBox(
+            height: 20,
+          ),
+          listOtelBaslik(),
+          listOtel(),
+          const SizedBox(
+            height: 40,
+          ),
+          Container(
+            margin: const EdgeInsets.only(left: 16),
+            child: Text(
+              "Konum",
+              style: TextStyle1.captionMediumBlack,
+              textAlign: TextAlign.left,
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 16.0, right: 16, top: 15),
+            child: Container(
+              width: MediaQuery.of(context).size.width,
+              height: 200,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: GoogleMap(
+                onMapCreated: _onMapCreated,
+                initialCameraPosition: CameraPosition(
+                  target: _center,
+                  zoom: 12,
+                ),
+                markers: {
+                  Marker(
+                    markerId: MarkerId("marker_1"),
+                    position: _center,
+                    infoWindow: InfoWindow(
+                      title: "Aytekin Hotel",
+                    ),
+                  ),
                 },
-                label: Text("Konumu Göster"),
-                icon: Icon(ADIcon.location),
               ),
             ),
-            const SizedBox(
-              height: 50,
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 16.0, right: 16),
+            child: FloatingActionButton.extended(
+              onPressed: () {
+                mapController.animateCamera(
+                  CameraUpdate.newCameraPosition(
+                    CameraPosition(
+                      target: _center,
+                      zoom: 17,
+                    ),
+                  ),
+                );
+              },
+              label: Text("Konumu Göster"),
+              icon: Icon(ADIcon.location),
             ),
-          ],
-        ),
+          ),
+          const SizedBox(
+            height: 50,
+          ),
+        ],
       ),
     );
   }

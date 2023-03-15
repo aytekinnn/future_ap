@@ -1,3 +1,6 @@
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
 class Sabitler2 {
   static const List<String> otelOdalar = [
     "Marine Pool House",
@@ -18,6 +21,24 @@ class Sabitler2 {
     "Denizin kıyısındaki Alara Snack fırında patates, pide, döner, spagetti veya patates kızartması dahil olmak üzere lezzetli yiyecekleri ustaca hazırlar.",
     "Turkquoise Restoran'da dünya mutfağı, diyet yiyecekler ve çocuk büfesi seçeneklerinden oluşan açık büfe lezzetler servis edilir. Uygun ambiyans eşliğinde temalı geceler, dünya mutfaklarından ve yerel mutfaklardan mükemmel lezzetler sunuyor.",
     "Japon mutfağının en önemli spesiyalleri ve suşi... Uzman şefler tarafından hazırlanan suşi, Japon mutfağının en yaratıcı lezzetidir ve oryantal akşam yemeklerinin vazgeçilmez bir tadıdır. Restoranın kapasitesi 40 kişidir.",
+  ];
+  static const List<String> otelFirsatResim = [
+    "assets/images/firsatlar/firsat-1.jpg",
+    "assets/images/firsatlar/firsat-4.jpg",
+    "assets/images/firsatlar/firsat-5.jpg",
+    "assets/images/firsatlar/firsat-6.jpg",
+  ];
+  static const List<String> otelFirsatAdi = [
+    "Lorem Ipsum 1",
+    "Lorem Ipsum 2",
+    "Lorem Ipsum 3",
+    "Lorem Ipsum 4",
+  ];
+  static const List<String> otelFirsatlarAciklama = [
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here',",
+    "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur,",
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
   ];
   static const List<String> otelRestoranResim = [
     "assets/images/restoran/1.jpg",
@@ -89,7 +110,32 @@ class Sabitler2 {
   static const String aktiviteDetayBannerAciklama1 = "8:00 - 22:00 AM";
   static const String aktiviteDetayBannerAciklama2 = "44 Swanson Dr. Hamden";
   static const String aktiviteDetayBaslik = "Aktivite Detayları";
-  static const String aktiviteDetayAciklama = "Fiziksel ve zihinsel iyilik halini artırmak için nefes almaya odaklanan bir egzersiz şeklidir. Stresi azaltmak, sağlıklı kalmak, güç ve esnekliği artırmak için tasarlanmış bir dizi hareket, nefes egzersizleri ve meditasyon içerir. Amacı zihin ve bedende farkındalık ve uyum sağlamaktır.";
+  static const String aktiviteDetayAciklama =
+      "Fiziksel ve zihinsel iyilik halini artırmak için nefes almaya odaklanan bir egzersiz şeklidir. Stresi azaltmak, sağlıklı kalmak, güç ve esnekliği artırmak için tasarlanmış bir dizi hareket, nefes egzersizleri ve meditasyon içerir. Amacı zihin ve bedende farkındalık ve uyum sağlamaktır.";
   static const String odaServisiButon1 = "Giriş Yap";
-    static const String odaServisiButon2 = "Üye Ol";
+  static const String odaServisiButon2 = "Üye Ol";
+
+  static const String firsatlarAna = "Fırsatlar";
+  static const String firsatBaslik = "Lorem Ipsum";
+  static const String firsatAciklama = "Lorem ıpsum del kel reye deleke";
+  static const String firsatYeni = "Yeni";
+  static const String firsatIndirim = "İndirim";
+  static const String hesapButon = "Seçmek İçin Tıklayınız";
+  static const String firsatDetay =
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.";
+  static const String firsatDetayBaslik = "Lorem Ipsum";
+}
+
+class Dil extends Translations {
+  static final varsayilan = Locale("tr", "TR");
+  static final diller = [Locale("tr", "TR"), Locale("en", "US")];
+  @override
+  dynamic noSuchMethod(Invocation invocation) => {
+        'en_US': {
+          Sabitler2.hesapButon: 'Click to Select',
+        },
+        'tr_TR': {
+          Sabitler2.hesapButon: Sabitler2.hesapButon,
+        }
+      };
 }

@@ -70,6 +70,11 @@ class TextStyle1 {
     fontSize: 13,
     color: Sabitler.textBlack,
   );
+  static final TextStyle ovelineMediumWhite = GoogleFonts.montserrat(
+    fontWeight: FontWeight.w600,
+    fontSize: 13,
+    color: Sabitler.text,
+  );
   static final TextStyle ovelineMediumGrey = GoogleFonts.montserrat(
     fontWeight: FontWeight.w600,
     fontSize: 13,
@@ -122,7 +127,7 @@ class TextStyle1 {
   static const String menuAna = "Anasayfa";
   static const String menuHizmet = "Hizmetler";
   static const String menuFirsat = "Fırsatlar";
-  static const String menuHesap = "Hesabım";
+  static const String menuHesap = "Hesap";
   static final TextStyle unselectedNavigationBar = GoogleFonts.montserrat(
     fontWeight: FontWeight.w400,
     fontSize: 14.2,

@@ -2,9 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:future_app/assets/ad_icon.dart';
 import 'package:future_app/constants/renkler.dart';
+import 'package:future_app/constants/text.dart';
 import 'package:future_app/constants/text_style.dart';
 import 'package:future_app/route.dart';
+import 'package:future_app/widget/firsatlar_page.dart';
+import 'package:future_app/widget/hesap.dart';
 import 'package:future_app/widget/hizmetler_page.dart';
+import 'package:future_app/widget/otelbilgisi_page.dart';
+import 'package:get/get.dart';
 import 'widget/anasayfa_page.dart';
 
 void main() {
@@ -27,12 +32,18 @@ class _MyAppState extends State<MyApp> {
 
   late hizmetlerPage sayfaHizmet;
 
+  late firsatlarPage firsat;
+
+  late hesapPage hesap;
+
   @override
   void initState() {
     super.initState();
     sayfaAna = const HomePage();
     sayfaHizmet = const hizmetlerPage();
-    tumSayfalar = [sayfaAna, sayfaHizmet];
+    firsat = firsatlarPage();
+    hesap = const hesapPage();
+    tumSayfalar = [sayfaAna, sayfaHizmet, firsat, hesap];
   }
 
   // This widget is the root of your application.
@@ -41,10 +52,13 @@ class _MyAppState extends State<MyApp> {
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual,
         overlays: [SystemUiOverlay.top]);
 
-    return MaterialApp(
+    return GetMaterialApp(
+      translations: Dil(),
+      locale: Get.locale == null ? Get.deviceLocale : Get.locale,
+      fallbackLocale: Dil.varsayilan,
       debugShowCheckedModeBanner: false,
       title: "Future App",
-      theme: ThemeData(primaryColor: Sabitler.text),
+      themeMode: ThemeMode.system,
       onGenerateRoute: RouteGenerator.routeGenerator,
       //First Screen of Slider App
       home: Scaffold(

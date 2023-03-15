@@ -239,8 +239,8 @@ class _AktivitelerPageState extends State<AktivitelerPage> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Container(
-              width: 270,
-              height: 160,
+              width: 290,
+              height: 180,
               decoration: BoxDecoration(
                 color: const Color(0XFFC4E8FF),
                 borderRadius: BorderRadius.circular(20),
@@ -330,8 +330,8 @@ class _AktivitelerPageState extends State<AktivitelerPage> {
             Padding(
               padding: const EdgeInsets.only(left: 16.0),
               child: Container(
-                width: 270,
-                height: 160,
+                width: 290,
+                height: 180,
                 decoration: BoxDecoration(
                   color: const Color(0XFFFFE8C6),
                   borderRadius: BorderRadius.circular(20),
@@ -411,10 +411,11 @@ class _AktivitelerPageState extends State<AktivitelerPage> {
                         ],
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(right: 8.0),
+                        padding: const EdgeInsets.only(right: 12.0),
                         child: const Image(
                           image: AssetImage("assets/images/aktivite/boks.png"),
                           fit: BoxFit.cover,
+                          width: 105,
                         ),
                       ),
                     ],
@@ -425,8 +426,8 @@ class _AktivitelerPageState extends State<AktivitelerPage> {
             Padding(
               padding: const EdgeInsets.only(left: 16.0),
               child: Container(
-                width: 270,
-                height: 160,
+                width: 290,
+                height: 180,
                 decoration: BoxDecoration(
                   color: const Color(0XFFF4DCFF),
                   borderRadius: BorderRadius.circular(20),

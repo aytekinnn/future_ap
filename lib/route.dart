@@ -4,6 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:future_app/widget/aktivite_detay_page.dart';
 import 'package:future_app/widget/aktiviteler_page.dart';
 import 'package:future_app/widget/anasayfa_page.dart';
+import 'package:future_app/widget/firsat_detay_page.dart';
+import 'package:future_app/widget/firsatlar_page.dart';
+import 'package:future_app/widget/hesap.dart';
 import 'package:future_app/widget/oda-servisi.dart';
 import 'package:future_app/widget/odalar_page.dart';
 import 'package:future_app/widget/otelbilgisi_page.dart';
@@ -25,6 +28,20 @@ class RouteGenerator {
           return CupertinoPageRoute(builder: (context) => otelBilgisi());
         } else {
           return MaterialPageRoute(builder: (context) => otelBilgisi());
+        }
+
+      case '/firsatlarPage':
+        if (defaultTargetPlatform == TargetPlatform.iOS) {
+          return CupertinoPageRoute(builder: (context) => firsatlarPage());
+        } else {
+          return MaterialPageRoute(builder: (context) => firsatlarPage());
+        }
+
+      case '/hesapPage':
+        if (defaultTargetPlatform == TargetPlatform.iOS) {
+          return CupertinoPageRoute(builder: (context) => const hesapPage());
+        } else {
+          return MaterialPageRoute(builder: (context) => const hesapPage());
         }
 
       case '/odalarPage':
@@ -73,6 +90,15 @@ class RouteGenerator {
         } else {
           return MaterialPageRoute(
               builder: (context) => const OdaServisiPage());
+        }
+
+      case '/firsatDetayPage':
+        if (defaultTargetPlatform == TargetPlatform.iOS) {
+          return CupertinoPageRoute(
+              builder: (context) => const FirsatDetayPage());
+        } else {
+          return MaterialPageRoute(
+              builder: (context) => const FirsatDetayPage());
         }
 
       default:
